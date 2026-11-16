@@ -1,8 +1,26 @@
 # Suboy · 独立工具箱
 
-为最近开发的 8 个工具制作的中文个人作品集。原生 HTML、CSS 和 JavaScript，无需安装依赖或配置后端，可直接部署到 GitHub Pages。
+为最近开发的 8 个工具制作的中英文个人作品集。原生 HTML、CSS 和 JavaScript，无需安装依赖或配置后端，可直接部署到 GitHub Pages。
 
 在线访问：[Suboy 工具箱](https://suboy1219.github.io/suboy/)。
+
+English: [Suboy Toolbox](https://suboy1219.github.io/suboy/en/).
+
+## 中英文支持
+
+页头的 **中文 / EN** 可切换语言，两种语言都有完整静态 HTML。导航、介绍、工具卡片、图片替代文字、搜索提示、详情内容和无障碍标签均已翻译；应用截图保留项目提供的原始界面。英文详情会说明工具自身目前的界面语言，网站翻译不代表桌面或 Android 应用也已翻译。
+
+搜索可在任一语言页面匹配中英文工具关键词。点击语言入口时保存选择，再次从网站根路径进入时会使用明确选择过的英文偏好；直接访问英文路径会显示英文，访问 `?lang=zh` 可强制打开中文。浏览器禁止本地存储时仍能正常使用语言链接。切换时保留当前的页面锚点。
+
+两页分别设置自己的 canonical，互相使用 `hreflang` 标记语言版本，站点地图包含两个网址。页面文字可在 JavaScript 执行前读取。
+
+修改中文 `index.html` 或英文 `locales/en.json` 后，在推送前运行：
+
+```powershell
+python scripts/build_locales.py
+```
+
+脚本只用 Python 标准库，生成并更新 `en/index.html` 与 `locales/en.js`。新增中文文案缺少翻译时会报错，避免英文页出现未翻译的中文。部署时直接发布生成文件，不需要服务器运行 Python。
 
 ## 内容与功能
 
@@ -49,7 +67,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 ## 提交到 Google 搜索
 
-主页已有描述性标题、页面描述和规范网址（canonical）；8 个工具的介绍直接写在 HTML 中，关闭 JavaScript 也能读取。`sitemap.xml` 只包含实际存在的首页。页面内的 `#tools` 等锚点、详情弹窗以及外部项目仓库不是独立的本站网页，不重复写入站点地图。
+主页已有描述性标题、页面描述和规范网址（canonical）；8 个工具的介绍直接写在 HTML 中，关闭 JavaScript 也能读取。`sitemap.xml` 包含中英文首页。页面内的 `#tools` 等锚点、详情弹窗以及外部项目仓库不是独立的本站网页，不重复写入站点地图。
 
 1. 登录 [Google Search Console](https://search.google.com/search-console/welcome)，选择 **网址前缀**，输入 `https://suboy1219.github.io/suboy/`。
 2. 在验证方式中选择 **HTML 标记**，将 Google 提供的完整 `<meta name="google-site-verification" ...>` 放进 `index.html` 的 `<head>` 中。提交、推送并等待部署后，再返回 Search Console 点击 **验证**。成功后保留该标记，不要删除。
@@ -67,6 +85,9 @@ python -m http.server 8000 --bind 127.0.0.1
 - `index.html`：主页、8 个工具的介绍、标签、平台、图片和获取链接。
 - `styles.css`：配色、布局和响应式样式。
 - `app.js`：分类与搜索、详情文案和弹窗交互。
+- `locales/en.json`：英文文案、详情与两种语言通用的搜索关键词。
+- `scripts/build_locales.py`：生成静态英文页和英文运行时文案。
+- `en/index.html`、`locales/en.js`：生成文件，修改源文件后重新生成。
 - `sitemap.xml`：提交到搜索引擎的本站页面清单；增加独立页面或更换域名后同步更新，并检查 `index.html` 中的 canonical 和 `og:url`。
 - `assets/`：本地界面图片和站点图标；[图片来源](assets/README.md)。
 

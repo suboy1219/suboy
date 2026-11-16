@@ -1,6 +1,34 @@
 "use strict";
 
 (() => {
+  const english = document.documentElement.lang === "en";
+  const translations = window.SuboyEnglish;
+  const labels = english ? translations.ui : {
+    featuresTitle: "它能帮你做什么",
+    requirementsTitle: "使用与获取",
+    sourceLabel: "查看源码与说明",
+    results: "找到 {count} 个工具",
+    query: "，关键词：{query}",
+    detailLabel: "了解{name}的详情"
+  };
+  const preferenceKey = "suboy-language";
+  const languageLinks = [...document.querySelectorAll("[data-language]")];
+  languageLinks.forEach(link => link.addEventListener("click", () => {
+    // Navigation still works when browser storage is disabled or unavailable.
+    try { window.localStorage.setItem(preferenceKey, link.dataset.language); } catch {}
+    if (window.location.hash) link.hash = window.location.hash;
+  }));
+  try {
+    // Only an explicit, previously selected preference changes the landing page.
+    // Direct English URLs remain English; ?lang=zh always opens the Chinese page.
+    if (!english && new URLSearchParams(window.location.search).get("lang") !== "zh" && window.localStorage.getItem(preferenceKey) === "en") {
+      const destination = new URL(document.querySelector('[data-language="en"]').getAttribute("href"), window.location.href);
+      destination.hash = window.location.hash;
+      window.location.replace(destination.href);
+      return;
+    }
+  } catch {}
+
   const grid = document.querySelector("#tool-grid");
   const cards = [...grid.querySelectorAll(".tool-card")];
   const filters = [...document.querySelectorAll(".filter")];
@@ -13,7 +41,7 @@
   let opener = null;
 
   // Content is based on the eight projects' README files. Screenshots use public demo data.
-  const details = {
+  const details = english ? translations.details : {
     "cmd-dock": {
       features: ["每个标签和分屏拥有独立的 shell 进程，可混用 cmd、Windows PowerShell 和已安装的 PowerShell 7。", "左右、上下嵌套分屏，支持拖拽调整；Ctrl + F 实时搜索，Ctrl + H 查看命令历史。", "目录书签、输出留档、亮暗主题与可配置字体，把常用操作留在同一个窗口。"],
       requirements: "Windows 10 1809 及以上，x64。Releases 提供自带运行时版本，以及需要 .NET 10 Desktop Runtime 的精简版本。",
@@ -60,7 +88,7 @@
     const query = search.value.trim().normalize("NFKC").toLocaleLowerCase();
     let count = 0;
     cards.forEach(card => {
-      const text = `${card.textContent} ${card.dataset.id} ${card.dataset.keywords}`.normalize("NFKC").toLocaleLowerCase();
+      const text = `${card.textContent} ${card.dataset.id} ${card.dataset.keywords} ${translations.search[card.dataset.id]}`.normalize("NFKC").toLocaleLowerCase();
       const matches = (category === "all" || category === card.dataset.category) && text.includes(query);
       card.hidden = !matches;
       if (matches) count++;
@@ -68,7 +96,7 @@
     grid.classList.toggle("is-filtered", category !== "all" || Boolean(query));
     grid.hidden = count === 0;
     empty.hidden = count !== 0;
-    status.textContent = `找到 ${count} 个工具${query ? `，关键词：${search.value.trim()}` : ""}`;
+    status.textContent = labels.results.replace("{count}", String(count)) + (query ? labels.query.replace("{query}", search.value.trim()) : "");
     filters.forEach(button => {
       const active = button.dataset.filter === category;
       button.classList.toggle("active", active);
@@ -138,10 +166,10 @@
     download.className = "button button-dark";
     const source = card.querySelector(".source-link").cloneNode(true);
     source.className = "";
-    source.append(document.createTextNode("查看源码与说明"));
+    source.append(document.createTextNode(labels.sourceLabel));
     source.removeAttribute("aria-label");
     actions.append(download, source);
-    body.append(element("h3", "", "它能帮你做什么"), list, element("h3", "", "使用与获取"), element("p", "requirements", info.requirements), actions);
+    body.append(element("h3", "", labels.featuresTitle), list, element("h3", "", labels.requirementsTitle), element("p", "requirements", info.requirements), actions);
     content.append(header, figure, caption, body);
     dialog.showModal();
     dialog.scrollTop = 0;
@@ -152,7 +180,7 @@
     cards.forEach(card => {
       const button = card.querySelector(".detail-button");
       button.hidden = false;
-      button.setAttribute("aria-label", `了解${card.querySelector("h3").textContent}的详情`);
+      button.setAttribute("aria-label", labels.detailLabel.replace("{name}", card.querySelector("h3").textContent));
       button.setAttribute("aria-haspopup", "dialog");
       button.addEventListener("click", () => openDetails(card, button));
     });
