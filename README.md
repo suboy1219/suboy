@@ -2,6 +2,8 @@
 
 为最近开发的 8 个工具制作的中文个人作品集。原生 HTML、CSS 和 JavaScript，无需安装依赖或配置后端，可直接部署到 GitHub Pages。
 
+在线访问：[Suboy 工具箱](https://suboy1219.github.io/suboy/)。
+
 ## 内容与功能
 
 | 工具 | 用途 | 平台 |
@@ -45,11 +47,27 @@ python -m http.server 8000 --bind 127.0.0.1
 
 配置依据：[GitHub 官方文档：配置 GitHub Pages 发布源](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
 
+## 提交到 Google 搜索
+
+主页已有描述性标题、页面描述和规范网址（canonical）；8 个工具的介绍直接写在 HTML 中，关闭 JavaScript 也能读取。`sitemap.xml` 只包含实际存在的首页。页面内的 `#tools` 等锚点、详情弹窗以及外部项目仓库不是独立的本站网页，不重复写入站点地图。
+
+1. 登录 [Google Search Console](https://search.google.com/search-console/welcome)，选择 **网址前缀**，输入 `https://suboy1219.github.io/suboy/`。
+2. 在验证方式中选择 **HTML 标记**，将 Google 提供的完整 `<meta name="google-site-verification" ...>` 放进 `index.html` 的 `<head>` 中。提交、推送并等待部署后，再返回 Search Console 点击 **验证**。成功后保留该标记，不要删除。
+3. 在 **站点地图** 中提交 `https://suboy1219.github.io/suboy/sitemap.xml`。
+4. 使用顶部 **网址检查** 检查 `https://suboy1219.github.io/suboy/`，根据检查结果点击 **请求编入索引**，之后通过该工具查看收录状态。
+
+本站使用 GitHub 的子路径托管，无需配置 DNS 验证或购买域名。`robots.txt` 必须位于主机根路径 `https://suboy1219.github.io/robots.txt` 才有效，放到本项目中会变成 `/suboy/robots.txt`，因此本项目不添加无效的爬虫规则文件。没有 `robots.txt` 不会阻止 Google 抓取本站。
+
+可在个人 GitHub 简介和相关项目的 Website/README 中添加网站链接，帮助访客和搜索引擎发现网站。新站抓取可能需要几天到几周；提交站点地图或请求索引不保证收录，也不保证搜索排名。Google Search Console 的网址检查结果比单纯搜索 `site:suboy1219.github.io/suboy/` 更适合确认具体网址的索引状态。
+
+官方说明：[验证网站所有权](https://support.google.com/webmasters/answer/9008080?hl=zh-Hans)、[提交站点地图](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)、[请求重新抓取](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)、[robots.txt 文件位置](https://developers.google.com/crawling/docs/robots-txt/create-robots-txt)。
+
 ## 修改内容
 
 - `index.html`：主页、8 个工具的介绍、标签、平台、图片和获取链接。
 - `styles.css`：配色、布局和响应式样式。
 - `app.js`：分类与搜索、详情文案和弹窗交互。
+- `sitemap.xml`：提交到搜索引擎的本站页面清单；增加独立页面或更换域名后同步更新，并检查 `index.html` 中的 canonical 和 `og:url`。
 - `assets/`：本地界面图片和站点图标；[图片来源](assets/README.md)。
 
 增加工具时，在 `index.html` 增加一张 `.tool-card`，填写唯一 `data-id`、所属 `data-category` 和搜索用 `data-keywords`；在 `app.js` 的 `details` 中补齐同名详情，同时更新分类计数、工具总数和页面元数据。
