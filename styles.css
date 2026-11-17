@@ -57,3 +57,5 @@ html:lang(en) .collection-end p {max-width: 80%;text-align: center;}
   html:lang(en) .site-footer > p {width: 100%;order: 3;}
   html:lang(en) .site-footer > a:nth-last-child(2) {margin-left: auto;}
 }
+
+.eye-visual{background:#e7f1ec}.eye-visual .preview-caption{color:#6d8879}.eye-visual img{top:48px;left:27%;width:46%;border-radius:9px;box-shadow:0 10px 26px #1e493629}.eye-icon{background:#e0f0e7;color:#397b5c}.eye-icon .icon{width:25px;height:25px}

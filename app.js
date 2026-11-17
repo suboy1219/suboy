@@ -40,7 +40,7 @@
   let category = "all";
   let opener = null;
 
-  // Content is based on the eight projects' README files. Screenshots use public demo data.
+  // Content is based on the projects' README files. Image sources are noted in each detail.
   const details = english ? translations.details : {
     "cmd-dock": {
       features: ["每个标签和分屏拥有独立的 shell 进程，可混用 cmd、Windows PowerShell 和已安装的 PowerShell 7。", "左右、上下嵌套分屏，支持拖拽调整；Ctrl + F 实时搜索，Ctrl + H 查看命令历史。", "目录书签、输出留档、亮暗主题与可配置字体，把常用操作留在同一个窗口。"],
@@ -66,6 +66,11 @@
       features: ["Alt + F3 随时呼出或收起，快捷键可更换；呼出时聚焦，切回其他软件后取消置顶。", "停止输入约 0.6 秒自动保存，失焦和退出时也会保存；Ctrl + S 可立即保存。", "支持亮暗主题、可拉伸窗口和多行纯文本，每个非空行作为独立条目显示不同底色。"],
       requirements: "Windows 10 / 11 x64。Releases 提供含运行时的完整包，以及依赖 .NET 10 Desktop Runtime 的精简包。内容保存在本机 note.txt 中，可自行备份。",
       caption: "按应用布局绘制的亮暗主题界面示意，使用公开示例文字，并非实机截图。"
+    },
+    "eye-guard": {
+      features: ["工作与休息时长可自定义，默认专注 45 分钟、休息 5 分钟；全屏休息遮罩覆盖所有显示器，可配置是否允许跳过。", "可选开启 20-20-20 微提醒，每 20 分钟提示远眺 20 秒；蓝光过滤通过显卡 Gamma Ramp 调整色温。", "常驻托盘，支持暂停、立即休息、今日用眼统计和开机自启；设置保存在本机。"],
+      requirements: "Windows + .NET Framework 4.x，约 86 KB 的单文件程序，无需安装。HDR、部分显卡驱动及远程桌面可能无法应用蓝光过滤；强制结束后如颜色未恢复，可运行 eye-guard.exe --reset。",
+      caption: "项目文档中的实际主面板截图，展示休息倒计时与今日统计。"
     },
     "lag-lens": {
       features: ["每秒采样 CPU、物理磁盘和内存，在内存中保留最近 60 秒，支持暂停后逐帧回看。", "按进程名聚合资源占用，列出 Top 5 应用；点击应用可在资源管理器中定位程序。", "自动记录冻结和持续高压，托盘图标按负载变色；不主动弹窗打断工作。"],

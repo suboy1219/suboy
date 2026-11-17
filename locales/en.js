@@ -16,6 +16,7 @@ window.SuboyEnglish = {
     "desk-note": "notes sticky note text automatic save light dark theme memo 便签 笔记 自动保存",
     "lag-lens": "performance lag slowdown freeze detective CPU disk memory monitor history diagnostics 卡顿 性能 托盘",
     "dev-clean": "DevClean C drive cleanup cache disk space developer npm gradle docker 清理 缓存 C盘",
+    "eye-guard": "EyeGuard eye care break rest reminder screen time blue light filter gamma 20-20-20 tray 护眼 卫士 休息 提醒 蓝光 远眺 用眼",
     "screen-ruler": "Screen Ruler Android phone mobile measure millimeter inch calibration offline 直尺 测量 毫米"
   },
   "details": {
@@ -81,6 +82,15 @@ window.SuboyEnglish = {
       ],
       "requirements": "Windows x64. Releases provide a self-contained executable with no separate .NET requirement. Some system items need administrator rights. Read the project instructions and check the impact of each selected item before cleaning. The app interface is currently in Chinese.",
       "caption": "Screenshot from the built-in demo mode. Disk capacity and cache figures are simulated."
+    },
+    "eye-guard": {
+      "features": [
+        "Customize work and rest periods, with 45 minutes of focus and a five-minute break by default. The full-screen rest overlay covers every monitor, with optional skipping.",
+        "Optional 20-20-20 reminders suggest looking into the distance for 20 seconds every 20 minutes. A GPU gamma-ramp filter adjusts the display color temperature.",
+        "Runs in the system tray with pause, immediate breaks, daily screen-time statistics and optional launch at login. Settings stay on your computer."
+      ],
+      "requirements": "Windows with .NET Framework 4.x. The single executable is about 86 KB and needs no installation. HDR, some graphics drivers and remote desktop sessions may not support the blue-light filter. If colors stay warm after forcibly ending the app, run eye-guard.exe --reset. The app interface is currently in Chinese.",
+      "caption": "Actual main-panel screenshot from the project documentation, showing the break countdown and daily statistics."
     },
     "screen-ruler": {
       "features": [

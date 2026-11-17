@@ -1,8 +1,8 @@
 {
   "text": {
-    "Suboy 的个人工具箱：介绍 CmdDock、Codex 托盘用量、DeskNote、DevClean、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。": "Explore eight tools by Suboy: CmdDock, Codex Tray Usage, DeskNote, DevClean, LagLens, ProjectDock, QuickDock and Screen Ruler. Small apps for Windows and Android.",
+    "Suboy 的个人工具箱：介绍 CmdDock、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。": "Explore nine tools by Suboy: CmdDock, Codex Tray Usage, DeskNote, DevClean, EyeGuard, LagLens, ProjectDock, QuickDock and Screen Ruler. Small apps for Windows and Android.",
     "Suboy · 把日常，变顺手": "Suboy · Small tools, smoother days",
-    "8 个从真实需要出发的小工具。终端、桌面、系统诊断，还有口袋里的直尺。": "Eight tools built for everyday needs. Terminals, desktop shortcuts, system diagnostics and a ruler in your pocket.",
+    "9 个从真实需要出发的小工具。终端、桌面、护眼提醒、系统诊断，还有口袋里的直尺。": "Nine tools built for everyday needs. Terminals, desktop shortcuts, break reminders, system diagnostics and a ruler in your pocket.",
     "Suboy 工具箱 · Windows 效率工具与 Android 应用": "Suboy Toolbox · Windows Productivity Tools & Android Apps",
     "跳到工具列表": "Skip to tools",
     "Suboy 首页": "Suboy home",
@@ -38,7 +38,7 @@
     "开发与系统": "Dev & system",
     "找个顺手的工具…": "Find a handy tool…",
     "搜索工具": "Search tools",
-    "显示全部 8 个工具": "Showing all 8 tools",
+    "显示全部 9 个工具": "Showing all 9 tools",
     "一个窗口，多个工作现场": "One window. Multiple workspaces.",
     "CmdDock 暗色终端界面": "CmdDock terminal in dark mode",
     "精选工具": "Featured",
@@ -104,6 +104,14 @@
     "离线 · 零权限": "Offline · No permissions",
     "获取 APK": "Get the APK",
     "屏幕直尺源码": "Screen Ruler source code",
+    "专注一会儿，也让眼睛歇一歇。": "A little focus. A little rest for your eyes.",
+    "EyeGuard 护眼卫士主面板，显示休息倒计时和今日用眼统计": "EyeGuard main panel showing the break countdown and daily screen-time statistics",
+    "护眼卫士": "Eye care",
+    "按时休息，给双眼留点余裕": "Make room for regular screen breaks",
+    "默认专注 45 分钟、休息 5 分钟，用全屏遮罩提醒你停一停。支持远眺微提醒和蓝光过滤，常驻托盘，双击即用。": "Focus for 45 minutes, then rest for five by default. A full-screen overlay reminds you to pause, with optional distance-break reminders and blue-light filtering. Runs from the tray without installation.",
+    "定时休息": "Scheduled breaks",
+    "蓝光过滤": "Blue-light filter",
+    "EyeGuard 源码": "EyeGuard source code",
     "暂时没有找到这个工具": "No tools found just yet",
     "换个关键词，或者看看全部工具。": "Try another keyword, or explore all the tools.",
     "查看全部工具": "Show all tools",
@@ -111,7 +119,7 @@
     "你好，我是 Suboy": "Hi, I'm Suboy",
     "。": ".",
     "喜欢折腾，也喜欢把折腾过的东西做成工具。": "I like tinkering, and turning those experiments into useful tools.",
-    "这里收集了我最近做的 8 个小项目：让窗口整齐一点、操作少一点、问题更好查一点。如果刚好能帮到你，那就再好不过。": "These eight recent projects help keep windows organized, cut down repetitive work and make problems easier to spot. If one of them makes your day a little easier, that's a good outcome.",
+    "这里收集了我最近做的 9 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。": "These nine recent projects help keep windows organized, cut down repetitive work, make problems easier to spot and remind you to take a break. If one of them makes your day a little easier, that's a good outcome.",
     "去 GitHub 逛逛": "Explore my GitHub",
     "从真实需要出发": "Built from everyday needs",
     "保持简单，持续打磨。": "Keep it simple. Keep improving.",
@@ -136,6 +144,7 @@
     "desk-note": "notes sticky note text automatic save light dark theme memo 便签 笔记 自动保存",
     "lag-lens": "performance lag slowdown freeze detective CPU disk memory monitor history diagnostics 卡顿 性能 托盘",
     "dev-clean": "DevClean C drive cleanup cache disk space developer npm gradle docker 清理 缓存 C盘",
+    "eye-guard": "EyeGuard eye care break rest reminder screen time blue light filter gamma 20-20-20 tray 护眼 卫士 休息 提醒 蓝光 远眺 用眼",
     "screen-ruler": "Screen Ruler Android phone mobile measure millimeter inch calibration offline 直尺 测量 毫米"
   },
   "details": {
@@ -173,6 +182,15 @@
       "features": ["Scans built-in, allowlisted system and app cache paths. Review size, risk level and required permissions by category.", "Covers developer caches including npm, pnpm, pip, NuGet, Gradle, Cargo and Unity.", "Shows paths, sizes and risks before cleaning. High-risk items need extra confirmation, and results list successes and failures."],
       "requirements": "Windows x64. Releases provide a self-contained executable with no separate .NET requirement. Some system items need administrator rights. Read the project instructions and check the impact of each selected item before cleaning. The app interface is currently in Chinese.",
       "caption": "Screenshot from the built-in demo mode. Disk capacity and cache figures are simulated."
+    },
+    "eye-guard": {
+      "features": [
+        "Customize work and rest periods, with 45 minutes of focus and a five-minute break by default. The full-screen rest overlay covers every monitor, with optional skipping.",
+        "Optional 20-20-20 reminders suggest looking into the distance for 20 seconds every 20 minutes. A GPU gamma-ramp filter adjusts the display color temperature.",
+        "Runs in the system tray with pause, immediate breaks, daily screen-time statistics and optional launch at login. Settings stay on your computer."
+      ],
+      "requirements": "Windows with .NET Framework 4.x. The single executable is about 86 KB and needs no installation. HDR, some graphics drivers and remote desktop sessions may not support the blue-light filter. If colors stay warm after forcibly ending the app, run eye-guard.exe --reset. The app interface is currently in Chinese.",
+      "caption": "Actual main-panel screenshot from the project documentation, showing the break countdown and daily statistics."
     },
     "screen-ruler": {
       "features": ["Horizontal and vertical scales with draggable A and B markers. Read distances in millimeters or inches.", "Nudge markers by 0.1 mm or 1 mm. Calibrate using a bank card, a coin or the actual dimensions of your display.", "Calibration stays on the device. The screen remains awake while measuring; no network access or runtime permissions are required."],
