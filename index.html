@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f8f5">
-  <meta name="description" content="Suboy 的个人工具箱：介绍 CmdDock、Droid Studio Lite、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。">
+  <meta name="description" content="Suboy 的个人工具箱：介绍 CmdDock、Droid Studio Lite、Codex 聊天记录、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows、VS Code 和 Android 做一些顺手的小工具。">
   <link rel="canonical" href="https://suboy1219.github.io/suboy/">
   <link rel="alternate" hreflang="zh-Hans" href="https://suboy1219.github.io/suboy/">
   <link rel="alternate" hreflang="en" href="https://suboy1219.github.io/suboy/en/">
   <link rel="alternate" hreflang="x-default" href="https://suboy1219.github.io/suboy/">
   <link rel="sitemap" type="application/xml" href="./sitemap.xml">
   <meta property="og:title" content="Suboy · 把日常，变顺手">
-  <meta property="og:description" content="10 个从真实需要出发的小工具。终端、Android 调试、桌面、护眼提醒、系统诊断，还有口袋里的直尺。">
+  <meta property="og:description" content="11 个从真实需要出发的小工具。终端、Android 调试、Codex 会话、桌面、护眼提醒、系统诊断，还有口袋里的直尺。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://suboy1219.github.io/suboy/">
   <meta property="og:locale" content="zh_CN">
@@ -52,7 +52,7 @@
         <p class="hero-footnote"><svg class="icon small"><use href="#i-windows"/></svg>Windows 桌面<span class="separator">/</span>Android 随身工具</p>
       </div>
       <figure class="hero-visual" aria-label="CmdDock 和 Codex 托盘用量的界面展示">
-        <div class="visual-topline"><span><span class="status-dot"></span> BUILT FOR EVERYDAY</span><span>01 — 10</span></div>
+        <div class="visual-topline"><span><span class="status-dot"></span> BUILT FOR EVERYDAY</span><span>01 — 11</span></div>
         <div class="terminal-preview"><img src="./assets/cmd-dock.webp" width="1180" height="720" alt="CmdDock 原生终端的暗色界面" fetchpriority="high"></div>
         <div class="usage-preview"><img src="./assets/codex-taskbar.webp" width="640" height="452" alt="Codex 托盘用量面板，展示五小时与每周剩余额度"></div>
         <div class="visual-sticker"><span class="sticker-icon">↗</span><div>少一点折腾<span>多一点专注</span></div></div>
@@ -60,20 +60,20 @@
       </figure>
     </section>
 
-    <div class="collection-strip container"><p><span class="strip-number">10</span> 个实用工具<span class="strip-divider"></span>从电脑桌面，到手机屏幕</p><span class="strip-note">MADE TO MAKE LIFE EASIER <span>↘</span></span></div>
+    <div class="collection-strip container"><p><span class="strip-number">11</span> 个实用工具<span class="strip-divider"></span>从电脑桌面，到手机屏幕</p><span class="strip-note">MADE TO MAKE LIFE EASIER <span>↘</span></span></div>
 
     <section class="tools-section container" id="tools" aria-labelledby="tools-title">
       <div class="section-heading"><div><p class="section-kicker">THE TOOLBOX</p><h2 id="tools-title">最近折腾的工具<span class="heading-dot">.</span></h2></div><p>解决一个小问题，省下一点时间。</p></div>
       <div class="toolbar" hidden>
         <div class="filters" role="group" aria-label="按工具类别筛选">
-          <button class="filter active" type="button" data-filter="all" aria-pressed="true">全部工具 <span>10</span></button>
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">全部工具 <span>11</span></button>
           <button class="filter" type="button" data-filter="desktop" aria-pressed="false">桌面效率 <span>4</span></button>
-          <button class="filter" type="button" data-filter="dev" aria-pressed="false">开发与系统 <span>5</span></button>
+          <button class="filter" type="button" data-filter="dev" aria-pressed="false">开发与系统 <span>6</span></button>
           <button class="filter" type="button" data-filter="android" aria-pressed="false">Android <span>1</span></button>
         </div>
         <label class="search-box"><svg class="icon"><use href="#i-search"/></svg><input id="tool-search" type="search" placeholder="找个顺手的工具…" aria-label="搜索工具" maxlength="100" autocomplete="off"><span class="search-hint" aria-hidden="true">/</span></label>
       </div>
-      <p class="sr-only" id="results-status" role="status" aria-live="polite" aria-atomic="true">显示全部 10 个工具</p>
+      <p class="sr-only" id="results-status" role="status" aria-live="polite" aria-atomic="true">显示全部 11 个工具</p>
 
       <div class="tool-grid" id="tool-grid">
         <article class="tool-card featured" data-id="cmd-dock" data-category="dev" data-keywords="terminal powershell cmd 终端 命令行 分屏">
@@ -84,6 +84,11 @@
         <article class="tool-card" data-id="droid-studio-lite" data-category="dev" data-keywords="android adb logcat device explorer editor 安卓 调试 日志 设备 文件 编辑器">
           <div class="card-visual droid-visual"><div class="preview-caption">看日志、翻文件、改代码，轻装上阵。</div><img src="./assets/droid-studio-lite.webp" width="1200" height="742" alt="Droid Studio Lite 的设备文件、文本编辑器与 Logcat 演示界面" loading="lazy"></div>
           <div class="card-content"><div class="card-title-row"><span class="app-icon droid-icon" aria-hidden="true">DS</span><div><h3>Droid Studio Lite</h3><span class="tool-subtitle">轻量 Android 调试工具</span></div><span class="platform">Windows</span></div><p class="card-description">不用启动 Gradle 或加载项目索引。连接 adb，就能查看 Logcat、管理设备文件，在多标签编辑器里修改本地与设备上的文本。</p><div class="tags"><span>Logcat 过滤</span><span>设备文件管理</span><span>多标签编辑</span></div><div class="card-footer"><a class="download-link" href="https://github.com/suboy1219/droid-studio-lite#readme" target="_blank" rel="noopener noreferrer"><svg class="icon small"><use href="#i-external"/></svg>获取与使用</a><button type="button" class="detail-button" hidden>了解更多 <span aria-hidden="true">↗</span></button><a class="source-link" href="https://github.com/suboy1219/droid-studio-lite" target="_blank" rel="noopener noreferrer" aria-label="Droid Studio Lite 源码"><svg class="icon"><use href="#i-github"/></svg></a></div></div>
+        </article>
+
+        <article class="tool-card" data-id="codex-chat-history" data-category="dev" data-keywords="codex chat history vscode vsix rollout jsonl 聊天 历史 会话 记录 搜索 导出 归档 恢复">
+          <div class="card-visual history-visual"><div class="preview-caption">翻阅过去的对话，接着上次的思路。</div><img src="./assets/codex-chat-history.webp" width="1200" height="750" alt="Codex 聊天记录扩展的历史会话侧栏与聊天面板，内容为虚构演示" loading="lazy"></div>
+          <div class="card-content"><div class="card-title-row"><span class="app-icon history-icon" aria-hidden="true">◷</span><div><h3>Codex 聊天记录</h3><span class="tool-subtitle">在 VS Code 里找回对话</span></div><span class="platform">VS Code</span></div><p class="card-description">按天翻阅本机 Codex 会话，搜索消息、思考与工具调用。导出 Markdown，或一键回到 Codex 继续对话，记录解析全在本地完成。</p><div class="tags"><span>跨会话搜索</span><span>Markdown 导出</span><span>继续对话</span></div><div class="card-footer"><a class="download-link" href="https://github.com/suboy1219/codex-chat-history#readme" target="_blank" rel="noopener noreferrer"><svg class="icon small"><use href="#i-external"/></svg>获取与使用</a><button type="button" class="detail-button" hidden>了解更多 <span aria-hidden="true">↗</span></button><a class="source-link" href="https://github.com/suboy1219/codex-chat-history" target="_blank" rel="noopener noreferrer" aria-label="Codex 聊天记录源码"><svg class="icon"><use href="#i-github"/></svg></a></div></div>
         </article>
 
         <article class="tool-card" data-id="codex-taskbar" data-category="dev" data-keywords="codex ai quota 额度 用量 托盘 5h weekly">
@@ -132,7 +137,7 @@
 
     <section class="about-section container" id="about" aria-labelledby="about-title">
       <div class="about-monogram" aria-hidden="true">s<span>↗</span></div>
-      <div class="about-copy"><p class="section-kicker">BEHIND THE TOOLS</p><h2 id="about-title">你好，我是 Suboy<span class="green">。</span></h2><p>喜欢折腾，也喜欢把折腾过的东西做成工具。<br>这里收集了我最近做的 10 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。</p><a href="https://github.com/suboy1219" target="_blank" rel="noopener noreferrer">去 GitHub 逛逛<svg class="icon small"><use href="#i-arrow"/></svg></a></div>
+      <div class="about-copy"><p class="section-kicker">BEHIND THE TOOLS</p><h2 id="about-title">你好，我是 Suboy<span class="green">。</span></h2><p>喜欢折腾，也喜欢把折腾过的东西做成工具。<br>这里收集了我最近做的 11 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。</p><a href="https://github.com/suboy1219" target="_blank" rel="noopener noreferrer">去 GitHub 逛逛<svg class="icon small"><use href="#i-arrow"/></svg></a></div>
       <div class="about-note"><span class="status-dot"></span>从真实需要出发<span>保持简单，持续打磨。</span></div>
     </section>
   </main>

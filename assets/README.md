@@ -6,6 +6,7 @@
 | --- | --- | --- |
 | `cmd-dock.webp` | `cmd-dock/docs/images/hero-dark.png` | 独立演示环境截图 |
 | `droid-studio-lite.webp` | `droid-studio-lite/docs/screenshots/overview.png` | 应用内演示模式截图，设备与日志中的敏感信息已替换或隐藏 |
+| `codex-chat-history.webp` | `codex-chat-history/docs/images/overview-dark.png` | 使用内置虚构会话生成的历史侧栏与聊天面板，不包含真实聊天内容或路径 |
 | `codex-taskbar.webp` | `codex-taskbar/docs/panel.png` | 额度面板示例 |
 | `project-dock.webp` | `project-dock/docs/images/panel.png` | 项目名和标题为演示内容 |
 | `quick-dock.webp` | `quick-dock/docs/images/launcher.png` | 启动器界面预览 |

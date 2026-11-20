@@ -1,8 +1,8 @@
 {
   "text": {
-    "Suboy 的个人工具箱：介绍 CmdDock、Droid Studio Lite、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。": "Explore ten tools by Suboy: CmdDock, Droid Studio Lite, Codex Tray Usage, DeskNote, DevClean, EyeGuard, LagLens, ProjectDock, QuickDock and Screen Ruler. Small apps for Windows and Android.",
+    "Suboy 的个人工具箱：介绍 CmdDock、Droid Studio Lite、Codex 聊天记录、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows、VS Code 和 Android 做一些顺手的小工具。": "Explore eleven tools by Suboy: CmdDock, Droid Studio Lite, Codex Chat History, Codex Tray Usage, DeskNote, DevClean, EyeGuard, LagLens, ProjectDock, QuickDock and Screen Ruler. Small tools for Windows, VS Code and Android.",
     "Suboy · 把日常，变顺手": "Suboy · Small tools, smoother days",
-    "10 个从真实需要出发的小工具。终端、Android 调试、桌面、护眼提醒、系统诊断，还有口袋里的直尺。": "Ten tools built for everyday needs. Terminals, Android debugging, desktop shortcuts, break reminders, system diagnostics and a ruler in your pocket.",
+    "11 个从真实需要出发的小工具。终端、Android 调试、Codex 会话、桌面、护眼提醒、系统诊断，还有口袋里的直尺。": "Eleven tools built for everyday needs. Terminals, Android debugging, Codex sessions, desktop shortcuts, break reminders, system diagnostics and a ruler in your pocket.",
     "Suboy 工具箱 · Windows 效率工具与 Android 应用": "Suboy Toolbox · Windows Productivity Tools & Android Apps",
     "跳到工具列表": "Skip to tools",
     "Suboy 首页": "Suboy home",
@@ -38,7 +38,7 @@
     "开发与系统": "Dev & system",
     "找个顺手的工具…": "Find a handy tool…",
     "搜索工具": "Search tools",
-    "显示全部 10 个工具": "Showing all 10 tools",
+    "显示全部 11 个工具": "Showing all 11 tools",
     "一个窗口，多个工作现场": "One window. Multiple workspaces.",
     "CmdDock 暗色终端界面": "CmdDock terminal in dark mode",
     "精选工具": "Featured",
@@ -127,14 +127,23 @@
     "你好，我是 Suboy": "Hi, I'm Suboy",
     "。": ".",
     "喜欢折腾，也喜欢把折腾过的东西做成工具。": "I like tinkering, and turning those experiments into useful tools.",
-    "这里收集了我最近做的 10 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。": "These ten recent projects help keep windows organized, cut down repetitive work, make problems easier to spot and remind you to take a break. If one of them makes your day a little easier, that's a good outcome.",
+    "这里收集了我最近做的 11 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。": "These eleven recent projects help keep windows organized, cut down repetitive work, make problems easier to spot and remind you to take a break. If one of them makes your day a little easier, that's a good outcome.",
     "去 GitHub 逛逛": "Explore my GitHub",
     "从真实需要出发": "Built from everyday needs",
     "保持简单，持续打磨。": "Keep it simple. Keep improving.",
     "用小工具，给日常留一点余裕。": "Small tools. A little more breathing room.",
     "本站源码": "Site source",
     "回到顶部": "Back to top",
-    "关闭工具详情": "Close tool details"
+    "关闭工具详情": "Close tool details",
+    "翻阅过去的对话，接着上次的思路。": "Revisit past chats. Pick up your train of thought.",
+    "Codex 聊天记录扩展的历史会话侧栏与聊天面板，内容为虚构演示": "Codex Chat History session sidebar and chat panel with fictional demo content",
+    "Codex 聊天记录": "Codex Chat History",
+    "在 VS Code 里找回对话": "Revisit your chats in VS Code",
+    "按天翻阅本机 Codex 会话，搜索消息、思考与工具调用。导出 Markdown，或一键回到 Codex 继续对话，记录解析全在本地完成。": "Browse local Codex sessions by day and search messages, reasoning and tool calls. Export Markdown or return to Codex to continue a chat. All parsing happens locally.",
+    "跨会话搜索": "Search across sessions",
+    "Markdown 导出": "Markdown export",
+    "继续对话": "Continue a chat",
+    "Codex 聊天记录源码": "Codex Chat History source code"
   },
   "ui": {
     "featuresTitle": "What it can do",
@@ -145,6 +154,7 @@
     "detailLabel": "Read more about {name}"
   },
   "search": {
+    "codex-chat-history": "Codex Chat History VS Code extension VSIX local sessions rollout JSONL reasoning tool calls full-text search Markdown export resume unarchive 聊天 历史 会话 记录 搜索 导出 归档 恢复 继续对话",
     "cmd-dock": "terminal native tabs split panes command prompt shell search history bookmarks CJK 中文 终端 分屏",
     "droid-studio-lite": "Droid Studio Lite Android adb Logcat logs debugging Device Explorer files text editor CodeMirror tabs 安卓 调试 日志 设备 文件 编辑器 设备文件 文件管理 文本编辑 多标签",
     "codex-taskbar": "Codex Tray Usage quota remaining usage monitor weekly five-hour floating pill 额度 用量 托盘",
@@ -157,6 +167,11 @@
     "screen-ruler": "Screen Ruler Android phone mobile measure millimeter inch calibration offline 直尺 测量 毫米"
   },
   "details": {
+    "codex-chat-history": {
+      "features": ["Browse local Codex sessions grouped by day. Chat bubbles show messages, reasoning summaries, tool calls and recorded user images; reasoning and tool calls start collapsed.", "Search within a panel or across sessions and jump to matching messages. Export Markdown, open raw JSONL files or follow local file links.", "Continue a chat in Codex, or unarchive a session before opening it. Watches for record updates, follows the VS Code theme and parses everything locally."],
+      "requirements": "Requires VS Code and local Codex session records. See the project README to build or install a VSIX. Reads CODEX_HOME or ~/.codex by default, with a configurable data directory. Continuing a chat requires the Codex extension or CLI; explicitly restoring an archived chat runs codex unarchive to change its archive status. Encrypted reasoning cannot be displayed. The extension interface is currently in Chinese.",
+      "caption": "Demo image generated by the project from built-in fictional sessions, without real chats, accounts or personal paths."
+    },
     "cmd-dock": {
       "features": ["Each tab and split pane runs its own shell process. Mix cmd, Windows PowerShell and PowerShell 7 when installed.", "Split horizontally or vertically, nest panes and drag dividers. Use Ctrl + F to search and Ctrl + H for command history.", "Directory bookmarks, saved transcripts, light and dark themes, and configurable fonts keep everyday actions in one window."],
       "requirements": "Windows 10 version 1809 or later, x64. Releases include a self-contained build and a smaller build that requires the .NET 10 Desktop Runtime. The app interface is currently in Simplified Chinese.",
