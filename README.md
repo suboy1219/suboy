@@ -1,6 +1,6 @@
 # Suboy · 独立工具箱
 
-为最近开发的 9 个工具制作的中英文个人作品集。原生 HTML、CSS 和 JavaScript，无需安装依赖或配置后端，可直接部署到 GitHub Pages。
+为最近开发的 10 个工具制作的中英文个人作品集。原生 HTML、CSS 和 JavaScript，无需安装依赖或配置后端，可直接部署到 GitHub Pages。
 
 在线访问：[Suboy 工具箱](https://suboy1219.github.io/suboy/)。
 
@@ -27,6 +27,7 @@ python scripts/build_locales.py
 | 工具 | 用途 | 平台 |
 | --- | --- | --- |
 | [CmdDock](https://github.com/suboy1219/cmd-dock) | 多标签、任意分屏的原生终端 | Windows |
+| [Droid Studio Lite](https://github.com/suboy1219/droid-studio-lite) | Logcat、设备文件管理与多标签文本编辑 | Windows |
 | [Codex 托盘用量](https://github.com/suboy1219/codex-taskbar) | 查看 5 小时与每周剩余额度 | Windows |
 | [ProjectDock](https://github.com/suboy1219/project-dock) | 按项目整理和切换窗口 | Windows |
 | [QuickDock](https://github.com/suboy1219/quick-dock) | 鼠标旁的快速启动器 | Windows |
@@ -68,7 +69,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 ## 提交到 Google 搜索
 
-主页已有描述性标题、页面描述和规范网址（canonical）；9 个工具的介绍直接写在 HTML 中，关闭 JavaScript 也能读取。`sitemap.xml` 包含中英文首页。页面内的 `#tools` 等锚点、详情弹窗以及外部项目仓库不是独立的本站网页，不重复写入站点地图。
+主页已有描述性标题、页面描述和规范网址（canonical）；10 个工具的介绍直接写在 HTML 中，关闭 JavaScript 也能读取。`sitemap.xml` 包含中英文首页。页面内的 `#tools` 等锚点、详情弹窗以及外部项目仓库不是独立的本站网页，不重复写入站点地图。
 
 1. 登录 [Google Search Console](https://search.google.com/search-console/welcome)，选择 **网址前缀**，输入 `https://suboy1219.github.io/suboy/`。
 2. 在验证方式中选择 **HTML 标记**，将 Google 提供的完整 `<meta name="google-site-verification" ...>` 放进 `index.html` 的 `<head>` 中。提交、推送并等待部署后，再返回 Search Console 点击 **验证**。成功后保留该标记，不要删除。
@@ -83,7 +84,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 ## 修改内容
 
-- `index.html`：主页、9 个工具的介绍、标签、平台、图片和获取链接。
+- `index.html`：主页、10 个工具的介绍、标签、平台、图片和获取链接。
 - `styles.css`：配色、布局和响应式样式。
 - `app.js`：分类与搜索、详情文案和弹窗交互。
 - `locales/en.json`：英文文案、详情与两种语言通用的搜索关键词。
@@ -92,6 +93,6 @@ python -m http.server 8000 --bind 127.0.0.1
 - `sitemap.xml`：提交到搜索引擎的本站页面清单；增加独立页面或更换域名后同步更新，并检查 `index.html` 中的 canonical 和 `og:url`。
 - `assets/`：本地界面图片和站点图标；[图片来源](assets/README.md)。
 
-增加工具时，在 `index.html` 增加一张 `.tool-card`，填写唯一 `data-id`、所属 `data-category` 和搜索用 `data-keywords`；在 `app.js` 的 `details` 中补齐同名详情，同时更新分类计数、工具总数和页面元数据。
+增加工具时，在 `index.html` 增加一张 `.tool-card`，填写唯一 `data-id`、所属 `data-category` 和搜索用 `data-keywords`；在 `app.js` 的 `details` 中补齐同名详情，在 `locales/en.json` 中补齐英文文案、详情和搜索关键词，再运行语言生成脚本，同时更新分类计数、工具总数和页面元数据。
 
-部分项目的获取入口指向 README，由项目说明提供运行或构建方式；不假定所有项目都有 Release。屏幕直尺入口指向当前 README 中明确列出的 APK 文件。更新版本后可同步修改入口。
+部分项目的获取入口指向 README，由项目说明提供运行或构建方式；不假定所有项目都有 Release。Droid Studio Lite 的入口指向项目说明，目前在 Windows 10 / 11 上验证与打包，使用前需准备可用的 adb，并开启设备 USB 调试、授权本机。屏幕直尺入口指向当前 README 中明确列出的 APK 文件。更新版本后可同步修改入口。

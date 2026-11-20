@@ -10,6 +10,7 @@ window.SuboyEnglish = {
   },
   "search": {
     "cmd-dock": "terminal native tabs split panes command prompt shell search history bookmarks CJK 中文 终端 分屏",
+    "droid-studio-lite": "Droid Studio Lite Android adb Logcat logs debugging Device Explorer files text editor CodeMirror tabs 安卓 调试 日志 设备 文件 编辑器 设备文件 文件管理 文本编辑 多标签",
     "codex-taskbar": "Codex Tray Usage quota remaining usage monitor weekly five-hour floating pill 额度 用量 托盘",
     "project-dock": "project window groups organize switch drag workspace 窗口 项目 分组",
     "quick-dock": "launcher mouse cursor middle click shortcut installed apps scan 启动器 鼠标 中键",
@@ -28,6 +29,15 @@ window.SuboyEnglish = {
       ],
       "requirements": "Windows 10 version 1809 or later, x64. Releases include a self-contained build and a smaller build that requires the .NET 10 Desktop Runtime. The app interface is currently in Simplified Chinese.",
       "caption": "Project demo screenshot using example directories and text."
+    },
+    "droid-studio-lite": {
+      "features": [
+        "Stream Logcat with level, tag, keyword and pid filters. Pause, copy or export logs, with automatic reconnect after disconnection.",
+        "Browse device directories, create folders, upload and download files, and open text files with a double-click. Permission errors are shown clearly.",
+        "Edit local and device files in tabs with syntax highlighting, search and replace, and Ctrl + S to save. Device writes preserve the original permission bits."
+      ],
+      "requirements": "Currently tested and packaged for Windows 10 / 11. Requires a working local adb installation and a device with USB debugging enabled and this computer authorized. See the project README for running and building. Android permissions limit device file access; the editor accepts files up to 8 MB. The app interface is currently in Chinese.",
+      "caption": "Screenshot from the built-in demo mode. Device serial numbers, models, third-party package names, internal IP addresses and product-related logs are replaced or hidden."
     },
     "codex-taskbar": {
       "features": [

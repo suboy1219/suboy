@@ -1,8 +1,8 @@
 {
   "text": {
-    "Suboy 的个人工具箱：介绍 CmdDock、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。": "Explore nine tools by Suboy: CmdDock, Codex Tray Usage, DeskNote, DevClean, EyeGuard, LagLens, ProjectDock, QuickDock and Screen Ruler. Small apps for Windows and Android.",
+    "Suboy 的个人工具箱：介绍 CmdDock、Droid Studio Lite、Codex 托盘用量、DeskNote、DevClean、EyeGuard 护眼卫士、LagLens、ProjectDock、QuickDock 和屏幕直尺。为 Windows 和 Android 做一些顺手的小工具。": "Explore ten tools by Suboy: CmdDock, Droid Studio Lite, Codex Tray Usage, DeskNote, DevClean, EyeGuard, LagLens, ProjectDock, QuickDock and Screen Ruler. Small apps for Windows and Android.",
     "Suboy · 把日常，变顺手": "Suboy · Small tools, smoother days",
-    "9 个从真实需要出发的小工具。终端、桌面、护眼提醒、系统诊断，还有口袋里的直尺。": "Nine tools built for everyday needs. Terminals, desktop shortcuts, break reminders, system diagnostics and a ruler in your pocket.",
+    "10 个从真实需要出发的小工具。终端、Android 调试、桌面、护眼提醒、系统诊断，还有口袋里的直尺。": "Ten tools built for everyday needs. Terminals, Android debugging, desktop shortcuts, break reminders, system diagnostics and a ruler in your pocket.",
     "Suboy 工具箱 · Windows 效率工具与 Android 应用": "Suboy Toolbox · Windows Productivity Tools & Android Apps",
     "跳到工具列表": "Skip to tools",
     "Suboy 首页": "Suboy home",
@@ -38,7 +38,7 @@
     "开发与系统": "Dev & system",
     "找个顺手的工具…": "Find a handy tool…",
     "搜索工具": "Search tools",
-    "显示全部 9 个工具": "Showing all 9 tools",
+    "显示全部 10 个工具": "Showing all 10 tools",
     "一个窗口，多个工作现场": "One window. Multiple workspaces.",
     "CmdDock 暗色终端界面": "CmdDock terminal in dark mode",
     "精选工具": "Featured",
@@ -112,6 +112,14 @@
     "定时休息": "Scheduled breaks",
     "蓝光过滤": "Blue-light filter",
     "EyeGuard 源码": "EyeGuard source code",
+    "看日志、翻文件、改代码，轻装上阵。": "Logs, files and code. Travel light.",
+    "Droid Studio Lite 的设备文件、文本编辑器与 Logcat 演示界面": "Droid Studio Lite demo showing device files, the text editor and Logcat",
+    "轻量 Android 调试工具": "Lightweight Android debugging",
+    "不用启动 Gradle 或加载项目索引。连接 adb，就能查看 Logcat、管理设备文件，在多标签编辑器里修改本地与设备上的文本。": "View Logcat, manage device files and edit local or device text files in tabs through adb, without starting Gradle or loading a project index.",
+    "Logcat 过滤": "Logcat filters",
+    "设备文件管理": "Device Explorer",
+    "多标签编辑": "Tabbed editor",
+    "Droid Studio Lite 源码": "Droid Studio Lite source code",
     "暂时没有找到这个工具": "No tools found just yet",
     "换个关键词，或者看看全部工具。": "Try another keyword, or explore all the tools.",
     "查看全部工具": "Show all tools",
@@ -119,7 +127,7 @@
     "你好，我是 Suboy": "Hi, I'm Suboy",
     "。": ".",
     "喜欢折腾，也喜欢把折腾过的东西做成工具。": "I like tinkering, and turning those experiments into useful tools.",
-    "这里收集了我最近做的 9 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。": "These nine recent projects help keep windows organized, cut down repetitive work, make problems easier to spot and remind you to take a break. If one of them makes your day a little easier, that's a good outcome.",
+    "这里收集了我最近做的 10 个小项目：让窗口整齐一点、操作少一点、问题更好查一点，也记得按时休息。如果刚好能帮到你，那就再好不过。": "These ten recent projects help keep windows organized, cut down repetitive work, make problems easier to spot and remind you to take a break. If one of them makes your day a little easier, that's a good outcome.",
     "去 GitHub 逛逛": "Explore my GitHub",
     "从真实需要出发": "Built from everyday needs",
     "保持简单，持续打磨。": "Keep it simple. Keep improving.",
@@ -138,6 +146,7 @@
   },
   "search": {
     "cmd-dock": "terminal native tabs split panes command prompt shell search history bookmarks CJK 中文 终端 分屏",
+    "droid-studio-lite": "Droid Studio Lite Android adb Logcat logs debugging Device Explorer files text editor CodeMirror tabs 安卓 调试 日志 设备 文件 编辑器 设备文件 文件管理 文本编辑 多标签",
     "codex-taskbar": "Codex Tray Usage quota remaining usage monitor weekly five-hour floating pill 额度 用量 托盘",
     "project-dock": "project window groups organize switch drag workspace 窗口 项目 分组",
     "quick-dock": "launcher mouse cursor middle click shortcut installed apps scan 启动器 鼠标 中键",
@@ -152,6 +161,15 @@
       "features": ["Each tab and split pane runs its own shell process. Mix cmd, Windows PowerShell and PowerShell 7 when installed.", "Split horizontally or vertically, nest panes and drag dividers. Use Ctrl + F to search and Ctrl + H for command history.", "Directory bookmarks, saved transcripts, light and dark themes, and configurable fonts keep everyday actions in one window."],
       "requirements": "Windows 10 version 1809 or later, x64. Releases include a self-contained build and a smaller build that requires the .NET 10 Desktop Runtime. The app interface is currently in Simplified Chinese.",
       "caption": "Project demo screenshot using example directories and text."
+    },
+    "droid-studio-lite": {
+      "features": [
+        "Stream Logcat with level, tag, keyword and pid filters. Pause, copy or export logs, with automatic reconnect after disconnection.",
+        "Browse device directories, create folders, upload and download files, and open text files with a double-click. Permission errors are shown clearly.",
+        "Edit local and device files in tabs with syntax highlighting, search and replace, and Ctrl + S to save. Device writes preserve the original permission bits."
+      ],
+      "requirements": "Currently tested and packaged for Windows 10 / 11. Requires a working local adb installation and a device with USB debugging enabled and this computer authorized. See the project README for running and building. Android permissions limit device file access; the editor accepts files up to 8 MB. The app interface is currently in Chinese.",
+      "caption": "Screenshot from the built-in demo mode. Device serial numbers, models, third-party package names, internal IP addresses and product-related logs are replaced or hidden."
     },
     "codex-taskbar": {
       "features": ["The tray number shows the remaining five-hour quota. A floating pill shows both five-hour and weekly quotas.", "Drag the pill anywhere or dock it at a screen edge. Click to see percentages, reset times and the last update.", "Refreshes every 60 seconds, with manual refresh, an option to hide the pill and launch at login."],
