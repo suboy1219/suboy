@@ -67,17 +67,16 @@ html:lang(en) .collection-end p {max-width: 80%;text-align: center;}
 .support-section .section-heading{margin-bottom:12px}
 .support-intro{font-size:16px;color:var(--ink);max-width:760px;margin-bottom:24px;line-height:1.9}
 .support-intro>span{display:block;font-size:14px;color:var(--muted);margin-top:4px}
-.support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.support-method{min-width:0;padding:20px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);text-align:center}
-.support-method figcaption{margin-bottom:16px}
-.support-method h3{font-size:17px;font-weight:600}
-.support-method-note{margin-top:3px;font-size:14px;color:var(--muted)}
+.support-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:660px}
+.support-method{min-width:0;padding:14px 10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;text-align:center}
+.support-method figcaption{min-height:54px;margin-bottom:10px}
+.support-method h3{font-size:15px;font-weight:600}
+.support-method-note{margin-top:3px;font-size:12px;line-height:1.5;color:var(--muted)}
 .support-network{color:var(--green)}
-.support-qr{display:block;width:min(100%,180px);margin-inline:auto;border-radius:8px;overflow:hidden}
+.support-qr{display:block;width:min(100%,100px);margin-inline:auto;border-radius:6px;overflow:hidden}
 .support-qr img{width:100%;height:auto}
 .support-image-hint{margin-top:14px;font-size:14px;color:var(--muted);text-align:center}
 .support-wallet{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px 14px;margin-top:18px;padding:14px 16px;background:var(--soft);border-radius:10px}
 .support-address-label{font-size:14px;color:var(--muted)}
 .support-address{min-width:0;font:14px/1.7 Consolas,monospace;overflow-wrap:anywhere;user-select:all}
-@media(max-width:850px){.support-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.support-section{padding-bottom:32px}.support-grid{gap:12px}.support-method{padding:16px 12px}.support-method h3{font-size:16px}.support-wallet{justify-content:flex-start}}
+@media(max-width:600px){.support-section{padding-bottom:32px}.support-grid{gap:6px}.support-method{padding:10px 4px}.support-method figcaption{min-height:92px}.support-method h3{font-size:14px}.support-wallet{justify-content:flex-start}}
