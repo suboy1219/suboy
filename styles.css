@@ -62,6 +62,10 @@ html:lang(en) .collection-end p {max-width: 80%;text-align: center;}
 .droid-visual{background:#e6efeb}.droid-visual img{top:48px;left:6%;width:88%;border-radius:7px;box-shadow:0 10px 26px #1e493629}.droid-icon{background:#dff0e7;color:#287751;font-size:15px;font-weight:700}
 .history-visual{background:#e8edf2}.history-visual img{top:48px;left:6%;width:88%;border-radius:7px;box-shadow:0 10px 26px #24364a29}.history-icon{background:#e1e9f3;color:#426a91;font-size:25px}
 
+.about-contact{margin-top:12px;overflow-wrap:anywhere}
+.about-contact a{color:#5c7b49;font-weight:600;text-underline-offset:3px}
+.about-contact a:hover{text-decoration:underline}
+
 /* Four small payment images, visible without an extra interaction. */
 .support-section{padding-bottom:50px;scroll-margin-top:24px}
 .support-section .section-heading{margin-bottom:12px}
